@@ -12,17 +12,28 @@ import java.awt.Graphics;
 import java.awt.event.ActionEvent;  //for user inputs?
 
 public class game {
+  public static void print(String x){   //for readability
+    System.out.println(x);
+  }
   public static void main(String[] args) {
     String name = "user";
     System.out.println("Hello "+name);
+    print("Hello "+name);   //for readability
     
-private Timer timer;
+//new Timer.Start();
+//private Timer timer;
 
     for(int i = 0; i<10; i++){
       System.out.println(java.time.Clock.systemUTC().instant());
-      TimeUnit.SECONDS.sleep(1);
-      Thread.sleep(1000);
-      
+
+      //TimeUnit.SECONDS.sleep(1);
+      try{
+      Thread.sleep(3000);
+      }catch(Exception e){
+        print("didn't work: e error");
+      }finally{
+
+      }
     }
   }
 }
