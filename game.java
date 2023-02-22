@@ -34,16 +34,34 @@ public class game {
     //idk how to do visuals
   }
 
+  public 
+
   public static void main(String[] args) {
 
     /*main update loop
-    wait 1 second (or 1.1-.1*difficulty), move mobile block down, if landed spawn another, check for and remove valid rows.
+    wait 1 second (or 1.1-.1*difficulty), move mobile block down (and any floating), if landed spawn another, check for and remove valid rows.
     run screen update
 
     main user input loop
     wait until key pressed, if possible: move mobile block and wait .25 or .5 seconds, or difficulty/10 seconds
     run screen update
     */
+
+    //Thread gravityThread = new Thread();
+    //gravityThread.start();
+
+    //thread subclass method of threading, from website
+    gravityUpdate gravityThread = new gravityUpdate();
+    gravityThread.start();
+
+    //custom running code can be put directly into the thread like this too:
+    gravityUpdate gravitythread = new gravityUpdate(){
+      public void run(){
+        System.out.println("Gravity Thread Running");
+      }
+    };
+    gravitythread.start();
+
 
     for(int i = 0; i<10; i++){
       println(now());
