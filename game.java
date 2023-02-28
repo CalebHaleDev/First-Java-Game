@@ -5,8 +5,9 @@ import java.util.Scanner; //used for inputs? new scanner = new Scanner(System.in
 //print %s , variable to be substituted
 //import java.time.LocalDateTime;  
 //import java.time.format.DateTimeFormatter; 
-//import java.util.concurrent.TimeUnit;   //TimeUnit.SECONDS.sleep(1);
+import java.util.concurrent.TimeUnit;   //TimeUnit.SECONDS.sleep(1);
 //import javax.swing.Timer;     
+//import java.time.Clock
 import java.awt.Image;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;  //for user inputs?
@@ -17,6 +18,7 @@ public class game {
     System.out.println(x);
   }
 /*
+  //TimeSpan datatype?
   public static void wait(double seconds){
     try{
       Thread.sleep(Double.valueOf(1000*seconds).longValue());
@@ -34,25 +36,40 @@ public class game {
     //idk how to do visuals
   }
 
-  public 
 
   public static void main(String[] args) {
 
-    /*main update loop
-    wait 1 second (or 1.1-.1*difficulty), move mobile block down (and any floating), if landed spawn another, check for and remove valid rows.
-    run screen update
+   
 
-    main user input loop
-    wait until key pressed, if possible: move mobile block and wait .25 or .5 seconds, or difficulty/10 seconds
-    run screen update
-    */
+/*
+ * if (gravityTime < now){
+ * move blocks (if landed, create new faller)
+ * check for rows
+ * reset timer    gravityTime = now + 1.1-.1*difficulty sec
+ * }
+ * 
+ * if (userTime < now){
+ * shift if possible      user input
+ *  if shift successful, reset timer    userTime = now + difficulty/10 sec
+ * }
+ * 
+ * sleep 5+ milliseconds
+ */
 
-    //Thread gravityThread = new Thread();
-    //gravityThread.start();
+
+
+    Thread gravityThread = new Thread(){
+      public void run(){
+        //TimeUnit.SECONDS.sleep(1);
+      //Thread.sleep(1000);
+      println("gravity");
+      }
+    };
+    gravityThread.start();
 
     //thread subclass method of threading, from website
-    gravityUpdate gravityThread = new gravityUpdate();
-    gravityThread.start();
+    //gravityUpdate gravityThread = new gravityUpdate();
+    //gravityThread.start();
 
     //custom running code can be put directly into the thread like this too:
     gravityUpdate gravitythread = new gravityUpdate(){
@@ -66,7 +83,13 @@ public class game {
     for(int i = 0; i<10; i++){
       println(now());
       //wait(1);
-      Thread.sleep(1000);
+      try{
+        Thread.sleep(1000);
+        }catch(Exception e){
+          println("sleep didn't work: exception e");
+        }finally{
+        }
+      
      
     }
   }
