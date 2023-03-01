@@ -2,14 +2,11 @@ import java.sql.Time;
 import java.util.ArrayList;
 //import java.util.Date;
 import java.util.Scanner; //used for inputs? new scanner = new Scanner(System.in)  then  = scanner.nextLine()   then after use, use scanner.close();
-//print %s , variable to be substituted
 //import java.time.LocalDateTime;  
-
-//import javax.swing.Timer;     
+   
 //import java.time.Clock;
 import java.awt.Image;
 import java.awt.Graphics;
-//import java.awt.event.ActionEvent;  //for user inputs?
 
 //for keypress events
 import java.awt.event.KeyAdapter;
@@ -18,6 +15,8 @@ import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import java.awt.Dimension;
 //import javax.swing.SwingUtilities;
+//for background color
+import java.awt.Color;
 
 public class game {
   //for readability
@@ -72,8 +71,14 @@ public class game {
  
      myJFrame.setVisible(true);
      myJFrame.setSize(new Dimension(900, 800));
-     myJFrame.setMinimumSize(new Dimension(700, 700));
-
+     myJFrame.setResizable(false);
+     //myJFrame.setMinimumSize(new Dimension(700, 700));
+     myJFrame.setTitle("Game window");
+     myJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //this makes the window close, not just hide when exitted
+     //ImageIcon image = new ImageIcon(file name or path for logo)    //creates an image icon
+     //myJFrame.setIconImage(image.getImage());   //puts an image on the logo spot on the frame
+     myJFrame.getContentPane().setBackground(new Color(100,100,100));
+     
 
      for(int i = 0; i<10; i++){
       println(now());
