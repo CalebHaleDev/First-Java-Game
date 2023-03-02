@@ -11,8 +11,14 @@ import java.awt.Graphics;
 //for keypress events
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+
+import javax.swing.BorderFactory;
+import javax.swing.border.Border;
+import javax.swing.ImageIcon;
 //for screen display
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 import java.awt.Dimension;
 //import javax.swing.SwingUtilities;
 //for background color
@@ -70,7 +76,7 @@ public class game {
      });
  
      myJFrame.setVisible(true);
-     myJFrame.setSize(new Dimension(900, 800));
+     myJFrame.setSize(new Dimension(500, 700));
      myJFrame.setResizable(false);
      //myJFrame.setMinimumSize(new Dimension(700, 700));
      myJFrame.setTitle("Game window");
@@ -78,7 +84,29 @@ public class game {
      //ImageIcon image = new ImageIcon(file name or path for logo)    //creates an image icon
      //myJFrame.setIconImage(image.getImage());   //puts an image on the logo spot on the frame
      myJFrame.getContentPane().setBackground(new Color(100,100,100));
+     myJFrame.setLayout(null);  //allows custom label settings like size
      
+     Border squareBorder = BorderFactory.createLineBorder(Color.blue, 2);
+     JLabel square = new JLabel();
+     //ImageIcon element = new ImageIcon(path);
+     square.setIcon(null);
+     square.setBounds(0,0,100,100);
+     square.setBorder(squareBorder);
+     //text
+     square.setText("hello world");
+     square.setHorizontalTextPosition(JLabel.CENTER);
+     square.setVerticalTextPosition(JLabel.TOP);
+     //image
+     square.setHorizontalAlignment(0);
+     square.setVerticalAlignment(0);
+     square.setForeground(new Color(10, 50, 100));    //used to change text color
+     square.setIconTextGap(-5);
+     myJFrame.add(square);
+
+     
+     //these are used for background color of label, everywhere by default
+     square.setBackground(null);
+     square.setOpaque(false);
 
      for(int i = 0; i<10; i++){
       println(now());
