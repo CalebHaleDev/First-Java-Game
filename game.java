@@ -18,6 +18,7 @@ import javax.swing.ImageIcon;
 //for screen display
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import java.awt.Dimension;
 //import javax.swing.SwingUtilities;
@@ -85,28 +86,38 @@ public class game {
      //myJFrame.setIconImage(image.getImage());   //puts an image on the logo spot on the frame
      myJFrame.getContentPane().setBackground(new Color(100,100,100));
      myJFrame.setLayout(null);  //allows custom label settings like size
-     
+
      Border squareBorder = BorderFactory.createLineBorder(Color.blue, 2);
      JLabel square = new JLabel();
      //ImageIcon element = new ImageIcon(path);
      square.setIcon(null);
-     square.setBounds(0,0,100,100);
+     square.setBounds(0,0,10,10);
      square.setBorder(squareBorder);
      //text
      square.setText("hello world");
-     square.setHorizontalTextPosition(JLabel.CENTER);
+     square.setHorizontalTextPosition(JLabel.RIGHT);
      square.setVerticalTextPosition(JLabel.TOP);
+     //square.setText(null);  //might be useful for font and *size*
      //image
-     square.setHorizontalAlignment(0);
-     square.setVerticalAlignment(0);
+     square.setHorizontalAlignment(JLabel.LEFT);
+     square.setVerticalAlignment(JLabel.BOTTOM);
      square.setForeground(new Color(10, 50, 100));    //used to change text color
      square.setIconTextGap(-5);
      myJFrame.add(square);
 
      
      //these are used for background color of label, everywhere by default
-     square.setBackground(null);
-     square.setOpaque(false);
+     square.setBackground(new Color(100, 100, 255));
+     square.setOpaque(true);
+
+     JPanel gamePanel = new JPanel();
+     gamePanel.setBackground(new Color(100, 50, 1));
+     gamePanel.setBounds(30, 30, 250, 350);
+     gamePanel.add(square);
+     //gamePanel.setLayout(new BorderLayout());
+     myJFrame.add(gamePanel);
+
+
 
      for(int i = 0; i<10; i++){
       println(now());
