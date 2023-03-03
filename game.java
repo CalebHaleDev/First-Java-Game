@@ -91,16 +91,18 @@ public class game {
      JLabel square = new JLabel();
      //ImageIcon element = new ImageIcon(path);
      square.setIcon(null);
-     square.setBounds(0,0,10,10);
+     square.setBounds(35,35,35,35);
      square.setBorder(squareBorder);
+
      //text
      square.setText("hello world");
-     square.setHorizontalTextPosition(JLabel.RIGHT);
-     square.setVerticalTextPosition(JLabel.TOP);
+     //square.setHorizontalTextPosition(JLabel.RIGHT);
+     //square.setVerticalTextPosition(JLabel.TOP);
      //square.setText(null);  //might be useful for font and *size*
+
      //image
-     square.setHorizontalAlignment(JLabel.LEFT);
-     square.setVerticalAlignment(JLabel.BOTTOM);
+     //square.setHorizontalAlignment(JLabel.LEFT);
+     //square.setVerticalAlignment(JLabel.BOTTOM);
      square.setForeground(new Color(10, 50, 100));    //used to change text color
      square.setIconTextGap(-5);
      myJFrame.add(square);
@@ -114,7 +116,7 @@ public class game {
      gamePanel.setBackground(new Color(100, 50, 1));
      gamePanel.setBounds(30, 30, 250, 350);
      gamePanel.add(square);
-     //gamePanel.setLayout(new BorderLayout());
+     gamePanel.setLayout(null);
      myJFrame.add(gamePanel);
 
 
