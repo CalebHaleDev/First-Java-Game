@@ -15,6 +15,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 //for screen display
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -120,6 +121,10 @@ public class game {
      myJFrame.add(gamePanel);
 
 
+     JButton restartButton = new JButton();
+     //in a class for the frame, within the constructor, use restartButton.addActionListener(e -> //whatever it should do); for a restart button
+     //restartButton.setFocusable(false)
+     
 
      for(int i = 0; i<10; i++){
       println(now());
