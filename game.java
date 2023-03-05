@@ -1,16 +1,10 @@
-import java.sql.Time;
+
 import java.util.ArrayList;
-//import java.util.Date;
 import java.util.Scanner; //used for inputs? new scanner = new Scanner(System.in)  then  = scanner.nextLine()   then after use, use scanner.close();
-//import java.time.LocalDateTime;  
-   
-//import java.time.Clock;
-import java.awt.Image;
-import java.awt.Graphics;
 
 //for keypress events
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+//import java.awt.event.KeyAdapter;
+//import java.awt.event.KeyEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
@@ -22,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import java.awt.Dimension;
+import java.lang.System.Logger.Level;
 //import javax.swing.SwingUtilities;
 //for background color
 import java.awt.Color;
@@ -40,6 +35,14 @@ public class game {
     //idk how to do visuals
   }
 
+
+  public static void main(String[] args){
+
+    int level = 1;
+    //elementBlock[3][10] gameGrid = {new elementBlock(0)};
+
+    while(level>0){
+      //main game loop
 /*
  * if (gravityTime < now){
  * move blocks (if landed, create new faller)
@@ -54,39 +57,9 @@ public class game {
  * 
  * sleep 5+ milliseconds
  */
-  public static void main(String[] args){
-//throws Exception
-   
-     JFrame myJFrame = new JFrame();
- 
-     myJFrame.addKeyListener(new KeyAdapter() {
-       public void keyPressed(KeyEvent e) {
-         int keyCode = e.getKeyCode();
-         if (keyCode == KeyEvent.VK_UP) {
-           System.out.println("Up Arrow-Key is pressed!");
-         }
-         else if (keyCode == KeyEvent.VK_DOWN) {
-           System.out.println("Down Arrow-Key is pressed!");
-         }
-         else if (keyCode == KeyEvent.VK_LEFT) {
-           System.out.println("Left Arrow-Key is pressed!");
-         }
-         else if (keyCode == KeyEvent.VK_RIGHT) {
-         System.out.println("Right Arrow-Key is pressed!");
-         }
-       }
-     });
- 
-     myJFrame.setVisible(true);
-     myJFrame.setSize(new Dimension(500, 700));
-     myJFrame.setResizable(false);
-     //myJFrame.setMinimumSize(new Dimension(700, 700));
-     myJFrame.setTitle("Game window");
-     myJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //this makes the window close, not just hide when exitted
-     //ImageIcon image = new ImageIcon(file name or path for logo)    //creates an image icon
-     //myJFrame.setIconImage(image.getImage());   //puts an image on the logo spot on the frame
-     myJFrame.getContentPane().setBackground(new Color(100,100,100));
-     myJFrame.setLayout(null);  //allows custom label settings like size
+    }
+
+   gameFrame frame = new gameFrame();
 
      Border squareBorder = BorderFactory.createLineBorder(Color.blue, 2);
      JLabel square = new JLabel();
@@ -106,7 +79,7 @@ public class game {
      //square.setVerticalAlignment(JLabel.BOTTOM);
      square.setForeground(new Color(10, 50, 100));    //used to change text color
      square.setIconTextGap(-5);
-     myJFrame.add(square);
+     frame.add(square);
 
      
      //these are used for background color of label, everywhere by default
@@ -118,7 +91,7 @@ public class game {
      gamePanel.setBounds(30, 30, 250, 350);
      gamePanel.add(square);
      gamePanel.setLayout(null);
-     myJFrame.add(gamePanel);
+     frame.add(gamePanel);
 
 
      JButton restartButton = new JButton();
