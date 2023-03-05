@@ -1,11 +1,14 @@
-public class elementBlock(int atomicNumber, int charge) {
-    elementBlock(){
-        //this.atomicNumber = atomicNumber;
-        //this.charge = charge;
+public class elementBlock{
+    private int atomicNumber;
+    private int charge;
+
+    public elementBlock(int atomicNumber, int charge){
+        this.atomicNumber = atomicNumber;
+        this.charge = charge;
         System.out.println("a new element with atomic number "+atomicNumber+" has been made");
     }
     
-    void sayAtomicNumber(){
-        System.out.println(this.atomicNumber);
+    void sayStats(){
+        System.out.println(this.atomicNumber+" "+this.charge);
     }
 }

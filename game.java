@@ -1,5 +1,5 @@
-
 import java.util.ArrayList;
+import java.util.Random;
 
 //for keypress events
 //import java.awt.event.KeyAdapter;
@@ -33,11 +33,24 @@ public class game {
     //idk how to do visuals
   }
 
-
+  public static void createGrid(int width, int height){
+    elementBlock[][] gameGrid = new elementBlock[width][height];
+    Random rand = new Random();
+    for(int i=0;i<3;i++){
+      for(int j=0;j<10;j++){
+        //int atomicNum = rand.nextInt(8);
+        //int charge = rand.nextInt(atomicNum); //?
+        gameGrid[i][j] = new elementBlock(0, 0);
+        //gameGrid[i][j] = new elementBlock(atomicNum, charge);
+      }
+    }
+  }
   public static void main(String[] args){
 
     int level = 1;
-    //elementBlock[3][10] gameGrid = {new elementBlock(0)};
+    createGrid(3, 10);
+
+
 
     while(level>0){
       //main game loop
@@ -58,7 +71,7 @@ public class game {
     }
 
 
-    
+
    gameFrame frame = new gameFrame();
 
      Border squareBorder = BorderFactory.createLineBorder(Color.blue, 2);
@@ -110,4 +123,3 @@ public class game {
     }
   }
 }
-
