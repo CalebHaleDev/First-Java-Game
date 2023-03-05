@@ -6,7 +6,7 @@ I had some trouble with the wait command, with Thread.Sleep, but got a loop made
 
 I also looked a lot into threads to use multiple timers (for game speed and user input speed), but upon reflection realized that that was unnecessary if I just used a quick gameTick limited by a system of timestamps to match the desired input speed and block-movement speeds.
 
-[Demo Video](https://youtu.be/-BphBRK0DX8))
+[Demo Video](https://youtu.be/-BphBRK0DX8)
 
 # Development Environment
 
