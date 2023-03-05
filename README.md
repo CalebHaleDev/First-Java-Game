@@ -25,6 +25,7 @@ I used Visual Studio Code to write the program in Java, importing several librar
 [JFrame and keypressing] (https://www.educative.io/answers/how-to-listen-to-and-take-action-on-keyboard-strokes-in-java)
 [more on JFrames] (https://alvinalexander.com/java/java-set-jframe-size/)
 [JFrame tutorial] (https://www.youtube.com/watch?v=Kmgo00avvEw)
+[Changing variables in a lambda function](https://unsekhable.com/2020/07/31/how-to-resolve-local-variable-defined-in-an-enclosing-scope-must-be-final-or-effectively-final-error/)
 
 # Future Work
 
