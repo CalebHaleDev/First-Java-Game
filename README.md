@@ -14,8 +14,8 @@ I used Visual Studio Code to write the program in Java, importing several librar
 
 # Useful Websites
 
-[help for time] (https://www.javatpoint.com/java-get-current-date#:~:text=Get%20Current%20Date%20%26%20Time%3A%20java.time.Clock,current%20date%20and%20time%20both.)
-[short tutorial] (https://www.youtube.com/watch?v=RRubcjpTkks)
+- [help for time] (https://www.javatpoint.com/java-get-current-date#:~:text=Get%20Current%20Date%20%26%20Time%3A%20java.time.Clock,current%20date%20and%20time%20both.)
+- [short tutorial] (https://www.youtube.com/watch?v=RRubcjpTkks)
 [long tutorial] (https://www.youtube.com/watch?v=A74TOX803D0)
 [w3schools tutorial course] (https://www.w3schools.com/java/default.asp)
 [w3schools try catch] (https://www.w3schools.com/java/java_try_catch.asp)
