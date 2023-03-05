@@ -41,7 +41,7 @@ public class game {
 
   public static void main(String[] args){
 
-    int level = 1;
+    int level[] = {1};
     createGrid(3, 10);
 
     //gameFrame frame = new gameFrame();
@@ -106,12 +106,12 @@ public class game {
       
      };
      myJFrame.add(restartButton);
-     restartButton.addActionListener(e -> level=0);
+     restartButton.addActionListener(e -> level[0]=0);
      //in a class for the frame, within the constructor, use restartButton.addActionListener(e -> //whatever it should do); for a restart button
      //restartButton.setFocusable(false)
 
 
-   // while(level>0){
+   // while(level[0]>0){
       //main game loop
 /*
  * if (gravityTime < now){
