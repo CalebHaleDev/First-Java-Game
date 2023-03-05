@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.Scanner; //used for inputs? new scanner = new Scanner(System.in)  then  = scanner.nextLine()   then after use, use scanner.close();
 
 //for keypress events
 //import java.awt.event.KeyAdapter;
@@ -16,7 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import java.awt.Dimension;
-import java.lang.System.Logger.Level;
 //import javax.swing.SwingUtilities;
 //for background color
 import java.awt.Color;
@@ -59,6 +57,8 @@ public class game {
  */
     }
 
+
+    
    gameFrame frame = new gameFrame();
 
      Border squareBorder = BorderFactory.createLineBorder(Color.blue, 2);
