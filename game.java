@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 //for keypress events
-//import java.awt.event.KeyAdapter;
-//import java.awt.event.KeyEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
@@ -20,19 +20,12 @@ import java.awt.Dimension;
 import java.awt.Color;
 
 public class game {
-  //for readability
-  public static void println(Object x){   
+  public static void println(Object x){   //for readability
     System.out.println(x);
   }
-
   public static Object now(){
     return java.time.Clock.systemUTC().instant();
   }
-
-  public static void updateScreen(){
-    //idk how to do visuals
-  }
-
   public static void createGrid(int width, int height){
     elementBlock[][] gameGrid = new elementBlock[width][height];
     Random rand = new Random();
@@ -45,6 +38,7 @@ public class game {
       }
     }
   }
+
   public static void main(String[] args){
 
     int level = 1;
@@ -52,7 +46,7 @@ public class game {
 
 
 
-    while(level>0){
+   // while(level>0){
       //main game loop
 /*
  * if (gravityTime < now){
@@ -68,11 +62,42 @@ public class game {
  * 
  * sleep 5+ milliseconds
  */
-    }
+  //  }
 
 
 
-   gameFrame frame = new gameFrame();
+   //gameFrame frame = new gameFrame();
+   JFrame myJFrame = new JFrame();
+
+   myJFrame.addKeyListener(new KeyAdapter() {
+    public void keyPressed(KeyEvent e) {
+         int keyCode = e.getKeyCode();
+         if (keyCode == KeyEvent.VK_UP) {
+           System.out.println("Up Arrow-Key is pressed!");
+         }
+         else if (keyCode == KeyEvent.VK_DOWN) {
+           System.out.println("Down Arrow-Key is pressed!");
+         }
+         else if (keyCode == KeyEvent.VK_LEFT) {
+           System.out.println("Left Arrow-Key is pressed!");
+         }
+         else if (keyCode == KeyEvent.VK_RIGHT) {
+         System.out.println("Right Arrow-Key is pressed!");
+         }
+       }
+     });
+ 
+     myJFrame.setVisible(true);
+     myJFrame.setSize(new Dimension(500, 700));
+
+     
+     myJFrame.setResizable(false);
+     //myJFrame.setMinimumSize(new Dimension(700, 700));
+     myJFrame.setTitle("Game window");
+     myJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //this makes the window close, not just hide when exitted
+     //myJFrame.getContentPane().setBackground(new Color(100,100,100));
+     //myJFrame.setLayout(null);  //allows custom label settings like size
+
 
      Border squareBorder = BorderFactory.createLineBorder(Color.blue, 2);
      JLabel square = new JLabel();
@@ -92,7 +117,9 @@ public class game {
      //square.setVerticalAlignment(JLabel.BOTTOM);
      square.setForeground(new Color(10, 50, 100));    //used to change text color
      square.setIconTextGap(-5);
-     frame.add(square);
+
+
+     myJFrame.add(square);
 
      
      //these are used for background color of label, everywhere by default
@@ -104,7 +131,7 @@ public class game {
      gamePanel.setBounds(30, 30, 250, 350);
      gamePanel.add(square);
      gamePanel.setLayout(null);
-     frame.add(gamePanel);
+     myJFrame.add(gamePanel);
 
 
      JButton restartButton = new JButton();
