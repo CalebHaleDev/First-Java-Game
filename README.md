@@ -14,17 +14,18 @@ I used Visual Studio Code to write the program in Java, importing several librar
 
 # Useful Websites
 
-[help for time] (https://www.javatpoint.com/java-get-current-date#:~:text=Get%20Current%20Date%20%26%20Time%3A%20java.time.Clock,current%20date%20and%20time%20both.)
-[short tutorial] (https://www.youtube.com/watch?v=RRubcjpTkks)
-[long tutorial] (https://www.youtube.com/watch?v=A74TOX803D0)
-[w3schools tutorial course] (https://www.w3schools.com/java/default.asp)
-[w3schools try catch] (https://www.w3schools.com/java/java_try_catch.asp)
-[double to long casting] (https://www.baeldung.com/java-convert-double-long)
-[java threads] (https://jenkov.com/tutorials/java-concurrency/creating-and-starting-threads.html#:~:text=Creating%20a%20thread%20in%20Java,thread.)
-[naming tips (TimeSpan datatype)] (https://www.youtube.com/watch?v=-J3wNP6u5YU)
-[JFrame and keypressing] (https://www.educative.io/answers/how-to-listen-to-and-take-action-on-keyboard-strokes-in-java)
-[more on JFrames] (https://alvinalexander.com/java/java-set-jframe-size/)
-[JFrame tutorial] (https://www.youtube.com/watch?v=Kmgo00avvEw)
+- [help for time](https://www.javatpoint.com/java-get-current-date#:~:text=Get%20Current%20Date%20%26%20Time%3A%20java.time.Clock,current%20date%20and%20time%20both.)
+- [short tutorial](https://www.youtube.com/watch?v=RRubcjpTkks)
+- [long tutorial](https://www.youtube.com/watch?v=A74TOX803D0)
+- [w3schools tutorial course](https://www.w3schools.com/java/default.asp)
+- [w3schools try catch](https://www.w3schools.com/java/java_try_catch.asp)
+- [double to long casting](https://www.baeldung.com/java-convert-double-long)
+- [java threads](https://jenkov.com/tutorials/java-concurrency/creating-and-starting-threads.html#:~:text=Creating%20a%20thread%20in%20Java,thread.)
+- [naming tips (TimeSpan datatype)](https://www.youtube.com/watch?v=-J3wNP6u5YU)
+- [JFrame and keypressing](https://www.educative.io/answers/how-to-listen-to-and-take-action-on-keyboard-strokes-in-java)
+- [more on JFrames](https://alvinalexander.com/java/java-set-jframe-size/)
+- [JFrame tutorial](https://www.youtube.com/watch?v=Kmgo00avvEw)
+- [Changing variables in a lambda function](https://unsekhable.com/2020/07/31/how-to-resolve-local-variable-defined-in-an-enclosing-scope-must-be-final-or-effectively-final-error/)
 
 # Future Work
 
