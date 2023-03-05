@@ -102,7 +102,11 @@ public class game {
      gamePanel.setLayout(null);
      myJFrame.add(gamePanel);
 
-     JButton restartButton = new JButton();
+     JButton restartButton = new JButton(){
+      
+     };
+     myJFrame.add(restartButton);
+     restartButton.addActionListener(e -> level=0);
      //in a class for the frame, within the constructor, use restartButton.addActionListener(e -> //whatever it should do); for a restart button
      //restartButton.setFocusable(false)
 
