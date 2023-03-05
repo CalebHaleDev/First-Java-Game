@@ -44,28 +44,7 @@ public class game {
     int level = 1;
     createGrid(3, 10);
 
-
-
-   // while(level>0){
-      //main game loop
-/*
- * if (gravityTime < now){
- * move blocks (if landed, create new faller)
- * check for rows
- * reset timer    gravityTime = now + 1.1-.1*difficulty sec
- * }
- * 
- * if (userTime < now){
- * shift if possible      user input
- *  if shift successful, reset timer    userTime = now + difficulty/20 sec
- * }
- * 
- * sleep 5+ milliseconds
- */
-  //  }
-
-
-   //gameFrame frame = new gameFrame();
+    //gameFrame frame = new gameFrame();
    JFrame myJFrame = new JFrame();
 
    myJFrame.addKeyListener(new KeyAdapter() {
@@ -95,7 +74,6 @@ public class game {
      //myJFrame.getContentPane().setBackground(new Color(100,100,100));
      //myJFrame.setLayout(null);  //allows custom label settings like size
 
-
      Border squareBorder = BorderFactory.createLineBorder(Color.blue, 2);
      JLabel square = new JLabel();
      //ImageIcon element = new ImageIcon(path);
@@ -124,10 +102,28 @@ public class game {
      gamePanel.setLayout(null);
      myJFrame.add(gamePanel);
 
-
      JButton restartButton = new JButton();
      //in a class for the frame, within the constructor, use restartButton.addActionListener(e -> //whatever it should do); for a restart button
      //restartButton.setFocusable(false)
+
+
+   // while(level>0){
+      //main game loop
+/*
+ * if (gravityTime < now){
+ * move blocks (if landed, create new faller)   //if landed in the first row, end game (level = 0)
+ * check for rows
+ * reset timer    gravityTime = now + 1.1-.1*difficulty sec
+ * }
+ * 
+ * if (userTime < now){
+ * shift if possible      user input
+ *  if shift successful, reset timer    userTime = now + difficulty/20 sec
+ * }
+ * 
+ * sleep 5+ milliseconds
+ */
+  //  }
      
 
      for(int i = 0; i<10; i++){
