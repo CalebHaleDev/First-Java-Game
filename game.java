@@ -65,7 +65,6 @@ public class game {
   //  }
 
 
-
    //gameFrame frame = new gameFrame();
    JFrame myJFrame = new JFrame();
 
@@ -89,8 +88,6 @@ public class game {
  
      myJFrame.setVisible(true);
      myJFrame.setSize(new Dimension(500, 700));
-
-     
      myJFrame.setResizable(false);
      //myJFrame.setMinimumSize(new Dimension(700, 700));
      myJFrame.setTitle("Game window");
@@ -105,23 +102,17 @@ public class game {
      square.setIcon(null);
      square.setBounds(35,35,35,35);
      square.setBorder(squareBorder);
-
      //text
      square.setText("hello world");
      //square.setHorizontalTextPosition(JLabel.RIGHT);
      //square.setVerticalTextPosition(JLabel.TOP);
      //square.setText(null);  //might be useful for font and *size*
-
      //image
      //square.setHorizontalAlignment(JLabel.LEFT);
      //square.setVerticalAlignment(JLabel.BOTTOM);
      square.setForeground(new Color(10, 50, 100));    //used to change text color
      square.setIconTextGap(-5);
-
-
      myJFrame.add(square);
-
-     
      //these are used for background color of label, everywhere by default
      square.setBackground(new Color(100, 100, 255));
      square.setOpaque(true);
