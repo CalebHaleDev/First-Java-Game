@@ -102,16 +102,15 @@ public class game {
      gamePanel.setLayout(null);
      myJFrame.add(gamePanel);
 
-     JButton restartButton = new JButton(){
-      
-     };
+     JButton restartButton = new JButton();
+     restartButton.setSize(50,30);
      myJFrame.add(restartButton);
      restartButton.addActionListener(e -> level[0]=0);
      //in a class for the frame, within the constructor, use restartButton.addActionListener(e -> //whatever it should do); for a restart button
-     //restartButton.setFocusable(false)
+     //restartButton.setFocusable(false); //I forgot what this does
 
 
-   // while(level[0]>0){
+    while(level[0]>0){
       //main game loop
 /*
  * if (gravityTime < now){
@@ -127,7 +126,7 @@ public class game {
  * 
  * sleep 5+ milliseconds
  */
-  //  }
+    }
      
 
      for(int i = 0; i<10; i++){
